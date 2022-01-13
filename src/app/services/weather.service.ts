@@ -126,11 +126,11 @@ export class WeatherService {
 
   public loadForecasts(city: string) {
     this._forecasts$.next(null)
-    this.http.get<any>(`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${city}`)
+    this.http.get<any>(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${city}`)
       .subscribe(res => {
 
         if (!res || !res.length) return
-        this.http.get<any>(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${res[0].Key}?apikey=${API_KEY}&details=true&metric=true`)
+        this.http.get<any>(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${res[0].Key}?apikey=${API_KEY}&details=true&metric=true`)
           .pipe(
             map(res => res.DailyForecasts.map(forecast => {
               const dayForcast: Forecast = {
