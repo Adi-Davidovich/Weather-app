@@ -1,0 +1,89 @@
+.forecast-preview {
+  padding: 15px 30px;
+  background-color: rgba(255, 255, 255, 0.637);
+  border-radius: 5px;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  margin-block-end: 20px;
+  @media screen and (max-width: 600px) {
+    padding: 15px 15px;
+  }   
+
+  .main {
+    flex-grow: 1;
+    gap: 50px;
+    align-items: center;
+    @media screen and (max-width: 800px) {
+      gap: 80px;
+    }   
+    @media screen and (max-width: 630px) {
+      gap: 50px;
+      font-size: 0.8em;
+    }   
+    @media screen and (max-width: 430px) {
+      gap: 20px;
+      font-size: 0.8em;
+    }   
+
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      min-width: 80px;
+      .day {
+        font-size: 1.2em;
+        font-weight: 500;
+        margin-block-end: 5px;
+      }
+      .date {
+        font-weight: 400;
+        color: rgb(97, 95, 95);
+      }
+    }
+
+    img {
+      width: 120px;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .temperature {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-inline-end: 20px;
+      min-width: 140px;
+
+      .unit {
+        font-size: 0.8em;
+      }
+      .low {
+        font-size: 0.6em;
+        font-weight: 400;
+        color: rgb(97, 95, 95);
+      }
+    }
+    @media screen and (max-width: 800px) {
+      .text {
+        display: none;
+      }
+    }   
+     .text {
+      margin-inline-end: 20px;
+    }
+  }
+  .fa-arrow-right {
+    color: transparent;
+    align-self: flex-end;
+    @media screen and (max-width: 600px) {
+      color: inherit;
+
+    }   
+  }
+  &:hover {
+    .fa-arrow-right {
+      color: inherit;
+    }
+  }
+}

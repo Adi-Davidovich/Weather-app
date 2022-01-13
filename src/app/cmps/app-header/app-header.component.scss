@@ -1,0 +1,21 @@
+:host {
+  background-color: #1f1f1f;
+}
+.app-header {
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  .nav-logo {
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    .fa-cloud-sun {
+      color: #fffc92;
+    }
+    .logo {
+      font-family: Merriweather-bold;
+      font-size: 1.2em;
+    }
+  }
+}

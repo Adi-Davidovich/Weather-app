@@ -1,0 +1,8 @@
+<section class="favorites-page container flex">
+    <h2>Favorite Locations</h2>
+    <ul *ngIf="favorites" class="clean-list">
+        <li *ngFor="let favorite of favorites">
+            {{favorite|uppercase}}
+        </li>
+    </ul>
+</section>
